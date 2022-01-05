@@ -41,7 +41,7 @@
 <SC.Group position={[0, 3, 3]}>
   {#if flamingoMesh}
     <SC.Primitive object={flamingoMesh.model} scale={[0.01, 0.01, 0.01]}>
-      <SC.Animation clip={flamingoMesh.clip} {time} />
+      <!-- <SC.Animation clip={flamingoMesh.clip} {time} /> -->
     </SC.Primitive>
   {/if}
   {#if parrotMesh}
@@ -50,7 +50,7 @@
       scale={[0.01, 0.01, 0.01]}
       position={[1, 1, 0.5]}
     >
-      <SC.Animation clip={parrotMesh.clip} {time} />
+      <!-- <SC.Animation clip={parrotMesh.clip} {time} /> -->
     </SC.Primitive>
   {/if}
   {#if storkMesh}
@@ -59,7 +59,7 @@
       scale={[0.01, 0.01, 0.01]}
       position={[-2, 0.75, 0.75]}
     >
-      <SC.Animation clip={storkMesh.clip} {time} />
+      <!-- <SC.Animation clip={storkMesh.clip} {time} /> -->
     </SC.Primitive>
   {/if}
 </SC.Group>
