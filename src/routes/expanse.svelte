@@ -1,7 +1,7 @@
 <script>
-  import { CubeTextureLoader, Color } from "three";
+  import { CubeTextureLoader } from "three";
   import * as SC from "svelte-cubed";
-  import Lights from "../components/Lights.svelte";
+  import ExpanseLights from "../components/ExpanseLights.svelte";
   import Camera from "../components/Camera.svelte";
   import Rocinante from "../components/Rocinante.svelte";
   import Mars from "../components/Mars.svelte";
@@ -37,28 +37,13 @@
 
 {#if background}
   <SC.Canvas {background} physicallyCorrectLights antialias>
-    <SC.SpotLight
-      position={[0, 10, 0]}
-      color={new Color(0xffc1bf)}
-      intensity={180}
-    />
-    <SC.SpotLight
-      position={[10, 0, 0]}
-      color={new Color(0xffc1bf)}
-      intensity={180}
-    />
-    <SC.SpotLight
-      position={[-10, 0, 0]}
-      color={new Color(0xffc1bf)}
-      intensity={180}
-    />
     <Rocinante />
     <Mars />
     <Earth />
     <Luna />
     <Ganymede />
 
-    <Lights />
+    <ExpanseLights />
     <Camera />
 
     <SC.OrbitControls
