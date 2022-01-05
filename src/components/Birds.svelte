@@ -1,5 +1,5 @@
 <script>
-  import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+  import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
   import * as SC from "svelte-cubed";
   import { Clock } from "three";
   

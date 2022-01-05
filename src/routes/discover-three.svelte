@@ -1,17 +1,17 @@
 <script>
-  import * as THREE from "three";
+  import { Color, AxesHelper, GridHelper } from "three";
   import * as SC from "svelte-cubed";
   import Lights from "../components/Lights.svelte";
   import Camera from "../components/Camera.svelte";
   // import PowerCube from "../components/PowerCube.svelte";
   // import PowerSphere from "../components/PowerSphere.svelte";
   import SphereGroup from "../components/SphereGroup.svelte";
-import TrainGroup from "../components/TrainGroup.svelte";
-import Birds from "../components/Birds.svelte";
+  import TrainGroup from "../components/TrainGroup.svelte";
+  import Birds from "../components/Birds.svelte";
 </script>
 
 <SC.Canvas
-  background={new THREE.Color("skyBlue")}
+  background={new Color("skyBlue")}
   physicallyCorrectLights
   antialias
 >
@@ -22,17 +22,9 @@ import Birds from "../components/Birds.svelte";
   <Birds />
   <Lights />
   <Camera />
-  <SC.Primitive 
-    object={new THREE.AxesHelper(10)}
-    position={[0, .01, 0]}
-  />
-  <SC.Primitive 
-    object={new THREE.AxesHelper(-10)}
-    position={[0, .01, 0]}
-  />
-  <SC.Primitive 
-    object={new THREE.GridHelper(10, 10)}
-  />
+  <SC.Primitive object={new AxesHelper(10)} position={[0, 0.01, 0]} />
+  <SC.Primitive object={new AxesHelper(-10)} position={[0, 0.01, 0]} />
+  <SC.Primitive object={new GridHelper(10, 10)} />
 
   <SC.OrbitControls
     enableDamping={true}

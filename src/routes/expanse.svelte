@@ -1,5 +1,5 @@
 <script>
-  import * as THREE from "three";
+  import { CubeTextureLoader } from "three";
   import * as SC from "svelte-cubed";
   import Lights from "../components/Lights.svelte";
   import Camera from "../components/Camera.svelte";
@@ -12,7 +12,7 @@
 
   let background;
   onMount(() => {
-    const loader = new THREE.CubeTextureLoader().setPath("/sc_textures/");
+    const loader = new CubeTextureLoader().setPath("/sc_textures/");
     loader.load(
       [
         // px
@@ -30,19 +30,13 @@
       ],
       (loaded) => {
         background = loaded;
-        // background.mapping = THREE.CubeUVReflectionMapping;
-        // background.encoding = THREE.sRGBEncoding;
       }
     );
   });
 </script>
 
 {#if background}
-  <SC.Canvas
-    {background}
-    physicallyCorrectLights
-    antialias
-  >
+  <SC.Canvas {background} physicallyCorrectLights antialias>
     <Rocinante />
     <Mars />
     <Earth />
@@ -64,6 +58,6 @@
   </SC.Canvas>
 {/if}
 
-    <!-- <SC.Primitive object={new THREE.AxesHelper(10)} position={[0, 0.01, 0]} />
-    <SC.Primitive object={new THREE.AxesHelper(-10)} position={[0, 0.01, 0]} />
-    <SC.Primitive object={new THREE.GridHelper(10, 10)} /> -->
+<!-- <SC.Primitive object={new AxesHelper(10)} position={[0, 0.01, 0]} />
+    <SC.Primitive object={new AxesHelper(-10)} position={[0, 0.01, 0]} />
+    <SC.Primitive object={new GridHelper(10, 10)} /> -->
