@@ -25,25 +25,26 @@
   });
 </script>
 
-<SC.SpotLight
-  position={[0, 10, 0]}
-  color={new Color(0xffc1bf)}
-  intensity={180}
-/>
-<SC.SpotLight
-  position={[10, 0, 0]}
-  color={new Color(0xffc1bf)}
-  intensity={180}
-/>
-<SC.SpotLight
-  position={[-10, 0, 0]}
-  color={new Color(0xffc1bf)}
-  intensity={180}
-/>
+
 {#if rociData}
   <SC.Primitive
     object={rociData.scene}
     scale={[0.03, 0.03, 0.03]}
     rotation={[rotation, rotation, rotation]}
   />
+  {:else}
+  <div class="loading">
+    <p>LOADING MODEL...</p>
+  </div>
 {/if}
+
+<style>
+  .loading {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    background: #ffffff18;
+    color: #ffffff;
+  }
+</style>

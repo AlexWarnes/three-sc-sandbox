@@ -4,6 +4,9 @@
 </nav>
 <slot />
 <style>
+  :global(p, a, h1, h2, h3, h4){
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
   nav {
     position: fixed;
     top: 0;
@@ -21,4 +24,5 @@
   a {
     margin: 0 1rem;
   }
+
 </style>
