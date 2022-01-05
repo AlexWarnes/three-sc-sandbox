@@ -1,0 +1,11 @@
+Model Information:
+* title:	MCRN Tachi [Expanse TV Show]
+* source:	https://sketchfab.com/3d-models/mcrn-tachi-expanse-tv-show-76fc983ab08c449b9042491a00e621cf
+* author:	Jakub.Vildomec (https://sketchfab.com/Jakub.Vildomec)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "MCRN Tachi [Expanse TV Show]" (https://sketchfab.com/3d-models/mcrn-tachi-expanse-tv-show-76fc983ab08c449b9042491a00e621cf) by Jakub.Vildomec (https://sketchfab.com/Jakub.Vildomec) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
